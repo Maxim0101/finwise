@@ -1,0 +1,239 @@
+/* === Layout === */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* === Typography === */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #006ACF;
+  margin-bottom: 1rem;
+}
+
+/* === Lesson Section === */
+.lessonContent {
+  background-color: #f4f8ff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.lessonText {
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+}
+
+.lessonText p {
+  margin-bottom: 1rem;
+}
+
+.lessonImage {
+  float: right;
+  width: 200px;
+  height: auto;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Quiz Button === */
+.startQuizBtn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #006ACF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.startQuizBtn:hover {
+  background-color: #0057b8;
+}
+
+/* === Quiz Modal Overlay === */
+.quizOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* === Quiz Modal === */
+.quizModal {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quizTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #006ACF;
+  margin-bottom: 1rem;
+}
+
+/* === Quiz Questions === */
+.question {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question p {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+
+.optionGroup label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #006acf;
+}
+
+/* === Submit Button === */
+.submitQuizBtn {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  background-color: #006ACF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Result Display === */
+.resultContainer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.confetti {
+  font-size: 1.5rem;
+  color: green;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+
+.tryAgainMsg {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #d9534f;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* === Result Buttons === */
+.resultButtonGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.retryBtn,
+.nextLessonBtn,
+.homeBtn {
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  background-color: #006ACF;
+}
+
+.retryBtn:hover,
+.nextLessonBtn:hover,
+.homeBtn:hover {
+  background-color: #0057b8;
+}
+
+/* === Global Reset === */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}

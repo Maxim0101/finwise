@@ -1,0 +1,44 @@
+/* ====== RESOURCES PAGE STYLE ====== */
+
+.resourcesTitle {
+    font-size: 1.8rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .resourcesSection {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    animation: slideIn 0.6s ease forwards;
+  }
+  
+  .resourcesSection h3 {
+    font-size: 1.4rem;
+    color: #006ACF; /* Consistent blue */
+    margin-top: 2rem;
+  }
+  
+  .resourcesSection ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .resourcesSection li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    color: #333;
+  }
+  
+  .resourcesSection a {
+    color: #1e4fc3;
+    text-decoration: underline;
+  }
+  
+  .resourcesSection a:hover {
+    color: #004aad;
+    text-decoration: none;
+  }
+  
